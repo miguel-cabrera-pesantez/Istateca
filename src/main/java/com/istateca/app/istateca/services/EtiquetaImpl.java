@@ -6,6 +6,8 @@ import com.istateca.app.istateca.models.Etiqueta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EtiquetaImpl extends BaseServiceImpl<Etiqueta, Integer> implements EtiquetaService {
 
@@ -14,5 +16,10 @@ public class EtiquetaImpl extends BaseServiceImpl<Etiqueta, Integer> implements 
 
     public EtiquetaImpl(BaseRepository<Etiqueta, Integer> baseRepository) {
         super(baseRepository);
+    }
+
+    @Override
+    public List<Etiqueta> etiquetasxLibros(Integer id) {
+        return repository.findAllByLibrosetiquetadosLibroId(id);
     }
 }

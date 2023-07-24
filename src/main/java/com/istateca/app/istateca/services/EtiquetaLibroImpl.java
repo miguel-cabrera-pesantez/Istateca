@@ -15,4 +15,6 @@ public class EtiquetaLibroImpl extends BaseServiceImpl<EtiquetaLibro, Integer> i
     public EtiquetaLibroImpl(BaseRepository<EtiquetaLibro, Integer> baseRepository) {
         super(baseRepository);
     }
+
+
 }

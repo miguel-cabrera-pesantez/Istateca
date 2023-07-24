@@ -1,5 +1,6 @@
 package com.istateca.app.istateca.daos;
 
+import com.istateca.app.istateca.models.Etiqueta;
 import com.istateca.app.istateca.models.Libro;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -24,4 +25,5 @@ public interface LibroRepository extends BaseRepository<Libro,Integer>{
     List<Libro> findAllByTituloContainingIgnoreCaseOrSubtituloContainingIgnoreCaseOrDescripcionContainingIgnoreCaseOrAreaContainingIgnoreCaseOrEtiquetasLibroEtiquetaNombreContainingIgnoreCase(String titulo, String subtitulo, String descripcion,String area, String nombre);
 
     boolean existsByDisponibilidadIsTrueAndId(Integer id);
+
 }
