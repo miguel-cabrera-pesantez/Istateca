@@ -41,4 +41,6 @@ public class EtiquetaController extends BaseController<Etiqueta> {
             return ResponseEntity.ok(etiquetas);
         }
     }
+
+    //comentado por culpa de renato >:V
 }
