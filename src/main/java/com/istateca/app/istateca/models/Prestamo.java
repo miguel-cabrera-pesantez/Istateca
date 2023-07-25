@@ -87,7 +87,7 @@ public class Prestamo implements Serializable,Actualizable<Prestamo> {
     @JoinColumn(name = "lib_id", referencedColumnName = "lib_id")
     private Libro libro;
 
-    @OneToOne(mappedBy = "prestamo")
+    @ManyToOne
     private TerceroPrestamo terceroPrestamo;
 
     // Bidirectional Relationships

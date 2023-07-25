@@ -19,7 +19,7 @@ public class TerceroPrestamo implements Serializable,Actualizable<TerceroPrestam
     @JoinColumn(name = "ter_id", referencedColumnName = "ter_id")
     private Tercero tercero;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "pre_id", referencedColumnName = "pre_id")
     private Prestamo prestamo;
 
