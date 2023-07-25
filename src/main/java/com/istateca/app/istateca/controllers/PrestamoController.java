@@ -59,6 +59,8 @@ public class PrestamoController  extends BaseController<Prestamo> {
                 System.out.println("Enviado a perosnas: "+biblios.size());
             }
             return ResponseEntity.ok(nuevoPrestamo);
+        } else if(nuevoPrestamo != null && nuevoPrestamo.getTipoPrestamo()==3) {
+            return ResponseEntity.ok(nuevoPrestamo);
         } else {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
