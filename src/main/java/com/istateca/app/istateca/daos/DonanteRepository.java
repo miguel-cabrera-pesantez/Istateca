@@ -10,4 +10,6 @@ public interface DonanteRepository extends BaseRepository<Donante,Integer>{
 
     List<Donante> findAllByNombreContainingIgnoreCase(String nombre);
 
+    Donante findByNombre(String nombre);
+
 }

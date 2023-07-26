@@ -23,4 +23,9 @@ public class AutorImpl extends BaseServiceImpl<Autor, Integer> implements AutorS
     public List<Autor> autoresxNombre(String nombre) {
         return repository.findAllByNombreContainingIgnoreCase(nombre);
     }
+
+    @Override
+    public Autor autorxNombre(String nombre) {
+        return repository.findByNombre(nombre);
+    }
 }

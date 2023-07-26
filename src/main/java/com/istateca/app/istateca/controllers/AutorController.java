@@ -40,4 +40,14 @@ public class AutorController extends BaseController<Autor> {
         }
     }
 
+    @GetMapping("/listarautorxnombre/{nombre}")
+    public ResponseEntity<Autor> autor_libro_2(@PathVariable String nombre) {
+        Autor autor = service.autorxNombre(nombre);
+        if (autor==null) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(autor);
+        }
+    }
+
 }

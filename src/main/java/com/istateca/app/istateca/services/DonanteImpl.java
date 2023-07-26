@@ -22,4 +22,9 @@ public class DonanteImpl extends BaseServiceImpl<Donante, Integer> implements Do
     public List<Donante> adonantesxNombre(String nombre) {
         return repository.findAllByNombreContainingIgnoreCase(nombre);
     }
+
+    @Override
+    public Donante adonantexNombre(String nombre) {
+        return repository.findByNombre(nombre);
+    }
 }

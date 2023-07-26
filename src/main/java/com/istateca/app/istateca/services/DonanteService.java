@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface DonanteService extends BaseService<Donante, Integer> {
 
-    public List<Donante> adonantesxNombre(String nombre);
+    List<Donante> adonantesxNombre(String nombre);
+
+    Donante adonantexNombre(String nombre);
 
 }

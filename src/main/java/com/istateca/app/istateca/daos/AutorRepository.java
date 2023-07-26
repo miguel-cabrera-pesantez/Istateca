@@ -10,4 +10,6 @@ public interface AutorRepository extends BaseRepository<Autor,Integer>{
 
     List<Autor> findAllByNombreContainingIgnoreCase(String nombre);
 
+    Autor findByNombre(String nombre);
+
 }

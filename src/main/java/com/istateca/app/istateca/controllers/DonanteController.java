@@ -43,4 +43,14 @@ public class DonanteController extends BaseController<Donante> {
         }
     }
 
+    @GetMapping("/listarxnombreindividual/{nombre}")
+    public ResponseEntity<Donante> donante_libro_2(@PathVariable String nombre) {
+        Donante donante = service.adonantexNombre(nombre);
+        if (donante==null) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(donante);
+        }
+    }
+
 }

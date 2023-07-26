@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface AutorService extends BaseService<Autor, Integer> {
 
-    public List<Autor> autoresxNombre(String nombre);
+    List<Autor> autoresxNombre(String nombre);
+
+    Autor autorxNombre(String nombre);
 
 }
