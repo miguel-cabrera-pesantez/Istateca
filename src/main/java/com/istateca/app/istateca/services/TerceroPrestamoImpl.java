@@ -6,6 +6,8 @@ import com.istateca.app.istateca.models.TerceroPrestamo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TerceroPrestamoImpl extends BaseServiceImpl<TerceroPrestamo, Integer> implements TerceroPrestamoService{
 
@@ -14,5 +16,10 @@ public class TerceroPrestamoImpl extends BaseServiceImpl<TerceroPrestamo, Intege
 
     public TerceroPrestamoImpl(BaseRepository<TerceroPrestamo, Integer> baseRepository) {
         super(baseRepository);
+    }
+
+    @Override
+    public List<TerceroPrestamo> tercerosxCedula(String cedula) {
+        return repository.findAllByTerceroCedula(cedula);
     }
 }
