@@ -14,7 +14,7 @@ import java.util.Date;
 public class Sugerencia implements Serializable,Actualizable<Sugerencia>{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "sur_id")
     private Integer id;
 

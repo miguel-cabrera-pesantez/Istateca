@@ -14,7 +14,7 @@ import java.util.List;
 public class Autor implements Serializable,Actualizable<Autor> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "ato_id")
     private Integer id;
 

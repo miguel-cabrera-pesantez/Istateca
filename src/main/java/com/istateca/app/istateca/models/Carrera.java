@@ -13,7 +13,7 @@ import java.util.List;
 public class Carrera implements Serializable,Actualizable<Carrera> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "car_id")
     private Integer id;
 

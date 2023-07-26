@@ -14,7 +14,7 @@ import java.util.List;
 public class Etiqueta implements Serializable,Actualizable<Etiqueta> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "eti_id")
     private Integer id;
 

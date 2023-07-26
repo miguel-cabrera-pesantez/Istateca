@@ -16,7 +16,7 @@ import java.util.List;
 public class Tercero implements Serializable,Actualizable<Tercero> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "ter_id")
     private Integer id;
 

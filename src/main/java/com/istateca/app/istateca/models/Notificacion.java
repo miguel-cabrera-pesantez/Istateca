@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Notificacion implements Serializable,Actualizable<Notificacion> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "not_id")
     private Integer id;
 

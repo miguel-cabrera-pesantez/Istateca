@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class TerceroPrestamo implements Serializable,Actualizable<TerceroPrestamo>{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "tps_id")
     private Integer id;
 
