@@ -61,6 +61,7 @@ public class SecurityConfig {
                     .requestMatchers("/prestamo/**").hasAnyRole("STUD", "BLIB", "ADMIN", "DOCEN")
                     .requestMatchers("/tercero/**").hasAnyRole("STUD", "BLIB", "ADMIN", "DOCEN")
                     .requestMatchers("/tipo/**").hasAnyRole("STUD", "BLIB", "ADMIN", "DOCEN")
+                    .requestMatchers("/donante/**").hasAnyRole("STUD", "BLIB", "ADMIN", "DOCEN")
                     .requestMatchers("/sugerencia/**").hasAnyRole("STUD", "BLIB", "ADMIN", "DOCEN")
                     .requestMatchers("/terceroprestamo/**").hasAnyRole("STUD", "BLIB", "ADMIN", "DOCEN")
                     .requestMatchers("/carrerafenix/**").hasAnyRole("STUD", "BLIB", "ADMIN", "DOCEN")

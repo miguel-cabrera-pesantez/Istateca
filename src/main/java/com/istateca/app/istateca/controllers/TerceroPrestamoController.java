@@ -40,4 +40,5 @@ public class TerceroPrestamoController extends BaseController<TerceroPrestamo> {
             return ResponseEntity.ok(terceroPrestamo);
         }
     }
+
 }
