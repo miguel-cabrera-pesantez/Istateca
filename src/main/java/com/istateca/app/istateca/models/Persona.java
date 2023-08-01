@@ -16,7 +16,7 @@ import java.util.Set;
 public class Persona implements Serializable,Actualizable<Persona> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "per_id")
     private Integer id;
 

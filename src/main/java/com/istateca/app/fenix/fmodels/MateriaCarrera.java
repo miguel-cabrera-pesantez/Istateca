@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Table(name = "materiaCarreras_istateca")
+@Table(name = "vistateca_carreras_materias")
 public class MateriaCarrera implements Serializable {
 
     @Id

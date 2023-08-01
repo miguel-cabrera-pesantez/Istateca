@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class EtiquetaLibro implements Serializable,Actualizable<EtiquetaLibro> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "elb_id")
     private Integer id;
 

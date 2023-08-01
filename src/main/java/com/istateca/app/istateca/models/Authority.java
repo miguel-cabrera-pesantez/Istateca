@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Authority implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name = "aut_id")
     private Integer id;
 

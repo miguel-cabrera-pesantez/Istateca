@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class AutorLibro implements Serializable,Actualizable<AutorLibro> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ali_id")
     private Integer id;
 

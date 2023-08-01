@@ -14,7 +14,7 @@ import java.util.List;
 public class Tipo implements Serializable,Actualizable<Tipo> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "tip_id")
     private Integer id;
 

@@ -19,7 +19,7 @@ import java.util.List;
 public class Libro implements Serializable,Actualizable<Libro> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lib_id")
     private Integer id;
 

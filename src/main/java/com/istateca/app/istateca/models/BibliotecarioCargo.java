@@ -13,7 +13,7 @@ import java.util.Date;
 public class BibliotecarioCargo implements Serializable, Actualizable<BibliotecarioCargo> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cgo_id")
     private Integer id;
 

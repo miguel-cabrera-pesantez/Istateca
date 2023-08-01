@@ -14,7 +14,7 @@ import java.util.List;
 public class Donante implements Serializable,Actualizable<Donante> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "don_id")
     private Integer id;
 

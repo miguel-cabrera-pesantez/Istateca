@@ -19,7 +19,7 @@ import java.util.Objects;
 public class Prestamo implements Serializable,Actualizable<Prestamo> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pre_id")
     private Integer id;
 
