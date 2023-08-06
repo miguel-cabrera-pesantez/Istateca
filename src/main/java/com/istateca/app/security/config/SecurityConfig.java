@@ -5,6 +5,7 @@ import com.istateca.app.security.filter.JWTTokenGeneratorFilter;
 import com.istateca.app.security.filter.JWTTokenValidatorFilter;
 import com.istateca.app.security.filter.RequestValidationBeforeFilter;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -25,6 +26,9 @@ import java.util.Collections;
 @Configuration
 public class SecurityConfig {
 
+    @Value("${data_folder}")
+    private String rutageneral;
+
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         CsrfTokenRequestAttributeHandler requestHandler = new CsrfTokenRequestAttributeHandler();
@@ -34,7 +38,7 @@ public class SecurityConfig {
                     @Override
                     public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                         CorsConfiguration config = new CorsConfiguration();
-                        config.setAllowedOrigins(Arrays.asList("http://localhost:4200", "http://localhost:58697"));// Reemplaza "http://example.com" con tu dominio permitido o patrón
+                        config.setAllowedOrigins(Arrays.asList("*"));// Reemplaza "http://example.com" con tu dominio permitido o patrón
                         config.setAllowedMethods(Collections.singletonList("*"));
                         config.setAllowCredentials(true);
                         config.setAllowedHeaders(Collections.singletonList("*"));
@@ -69,7 +73,7 @@ public class SecurityConfig {
                     .requestMatchers("/notificacion/**").hasAnyRole("STUD", "BLIB", "ADMIN", "DOCEN")
                     .requestMatchers("/ingresar").authenticated()
                     // Letting Access of fenix to ALL by the moment
-                    .requestMatchers("/ingresar", "/credentials","/Archivos/**","/libro/listar").permitAll()
+                    .requestMatchers("/ingresar", "/credentials", rutageneral,"/libro/listar").permitAll()
                 .and().formLogin().and().httpBasic();
         return http.build();
     }

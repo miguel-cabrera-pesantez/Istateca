@@ -84,9 +84,6 @@ public class Libro implements Serializable,Actualizable<Libro> {
     @Column(name = "lib_estado_libro")
     private Integer estadoLibro;
 
-    @Column(name = "lib_nombre_donante")
-    private String nombreDonante;
-
     @Column(name = "lib_activo")
     private Boolean activo;
 
@@ -187,9 +184,6 @@ public class Libro implements Serializable,Actualizable<Libro> {
         }
         if (entity.getEstadoLibro() != null) {
             this.setEstadoLibro(entity.getEstadoLibro());
-        }
-        if (entity.getNombreDonante() != null) {
-            this.setNombreDonante(entity.getNombreDonante());
         }
         if (entity.getActivo() != null) {
             this.setActivo(entity.getActivo());
