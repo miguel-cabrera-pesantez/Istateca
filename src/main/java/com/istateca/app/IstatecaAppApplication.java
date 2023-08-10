@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class IstatecaAppApplication {
 
 	public static void main(String[] args) {
-		System.out.println("TESTING 2 <<<<<------------------");
+		System.out.println("prueba 8/8/23 - 21:05 <<<<<------------------");
 		SpringApplication.run(IstatecaAppApplication.class, args);
 	}
 

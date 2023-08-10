@@ -40,7 +40,7 @@ public class SecurityConfig {
                         CorsConfiguration config = new CorsConfiguration();
                         config.setAllowedOrigins(Arrays.asList("*"));// Reemplaza "http://example.com" con tu dominio permitido o patrón
                         config.setAllowedMethods(Collections.singletonList("*"));
-                        config.setAllowCredentials(true);
+                        config.setAllowCredentials(false);
                         config.setAllowedHeaders(Collections.singletonList("*"));
                         config.setExposedHeaders(Arrays.asList("Authorization"));
                         config.setMaxAge(3600L);
