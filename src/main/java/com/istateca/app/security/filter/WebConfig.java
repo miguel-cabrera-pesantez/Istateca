@@ -15,8 +15,7 @@ public class WebConfig implements WebMvcConfigurer {
                 //.allowedOrigins("http://localhost:4200", "http://localhost:58697") // your reactjs URL
                 .allowedOriginPatterns("*")
                 .allowedMethods("GET", "POST", "PATCH", "PUT", "DELETE")
-                .allowedHeaders("Content-Type") // Adjust headers you need to allow
-                .allowCredentials(false); // Add only if you want to access cookie
+                .allowedHeaders("Content-Type")
+                .allowCredentials(false);
     }
-
 }
